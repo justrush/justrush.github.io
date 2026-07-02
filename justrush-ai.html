@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=20260702a" />
+  <link rel="stylesheet" href="css/style.css?v=20260702b" />
   <link rel="icon" href="assets/JustRushAI.png" />
 </head>
 <body class="theme-rush">
@@ -206,11 +206,150 @@
       </div>
     </section>
 
+    <!-- ============ HOW WE CHOOSE THE STACK ============ -->
+    <section class="hairline" id="stack">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">04 — How We Choose the Stack</p>
+          <h2>Which tools, when, and why.</h2>
+          <p class="lede">Every buyer asks it, so here's the answer in full: we match AI stacks to solution complexity, in four tiers. The right tier is a diagnosis, not a preference.</p>
+        </div>
+        <div class="tier-stack">
+
+          <div class="tier reveal">
+            <div class="tier-badge">
+              <span class="lvl">T1</span>
+              <span class="meter"><i class="on"></i><i></i><i></i><i></i></span>
+              <span class="cx">Complexity: Low</span>
+            </div>
+            <div class="tier-main">
+              <h3>Workflow Automation (No-Code)</h3>
+              <p class="cx-desc">Repetitive, rules-based tasks between existing tools.</p>
+              <div class="tier-fields">
+                <div class="tf">
+                  <h5>You'll know it's this tier when</h5>
+                  <p><em>"Our tools don't talk to each other."</em> Manual data entry, missed follow-ups, copy-paste between systems.</p>
+                </div>
+                <div class="tf">
+                  <h5>The stack</h5>
+                  <div class="chips"><span class="chip">Make.com</span><span class="chip">n8n</span><span class="chip">Zapier</span><span class="chip">Power Automate</span><span class="chip">Google Apps Script</span><span class="chip">Webhooks</span></div>
+                </div>
+                <div class="tf">
+                  <h5>Proof point</h5>
+                  <p>Green City estimate follow-up pipeline; automated reminders and dispatch — 60% less manual admin.</p>
+                </div>
+                <div class="tf">
+                  <h5>Timeline &amp; cost profile</h5>
+                  <p>Days to 2 weeks. Lowest cost, fastest payback.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tier reveal">
+            <div class="tier-badge">
+              <span class="lvl">T2</span>
+              <span class="meter"><i class="on"></i><i class="on"></i><i></i><i></i></span>
+              <span class="cx">Complexity: Medium</span>
+            </div>
+            <div class="tier-main">
+              <h3>LLM-Powered Workflows</h3>
+              <p class="cx-desc">Tasks needing language understanding or generation, with a human approving.</p>
+              <div class="tier-fields">
+                <div class="tf">
+                  <h5>You'll know it's this tier when</h5>
+                  <p><em>"We tried ChatGPT and nothing changed."</em> Call handling, drafting, document processing, triage.</p>
+                </div>
+                <div class="tf">
+                  <h5>The stack</h5>
+                  <div class="chips"><span class="chip">Claude &amp; OpenAI APIs</span><span class="chip">Prompt pipelines · structured output</span><span class="chip">AI call capture</span><span class="chip">RAG for company knowledge</span></div>
+                </div>
+                <div class="tf">
+                  <h5>Proof point</h5>
+                  <p><a href="justrush-results.html#call-capture" style="color:var(--brass-bright)">AI call capture answering 100% of inbound calls, 24/7</a>; always-on AI strategic advisor for a trades client.</p>
+                </div>
+                <div class="tf">
+                  <h5>Timeline &amp; cost profile</h5>
+                  <p>2–6 weeks. API costs scale with volume.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tier reveal">
+            <div class="tier-badge">
+              <span class="lvl">T3</span>
+              <span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span>
+              <span class="cx">Complexity: Medium-High</span>
+            </div>
+            <div class="tier-main">
+              <h3>Data &amp; Intelligence Layer</h3>
+              <p class="cx-desc">The business can't see itself: no reliable KPIs, migrations, forecasting.</p>
+              <div class="tier-fields">
+                <div class="tf">
+                  <h5>You'll know it's this tier when</h5>
+                  <p><em>"The P&amp;L says one thing; my gut says another."</em> Undocumented data, failed migrations, no single source of truth.</p>
+                </div>
+                <div class="tf">
+                  <h5>The stack</h5>
+                  <div class="chips"><span class="chip">SQL</span><span class="chip">Python</span><span class="chip">Tableau</span><span class="chip">Deterministic matching · entity resolution</span><span class="chip">ETL pipelines</span><span class="chip">Excel automation (openpyxl)</span></div>
+                </div>
+                <div class="tf">
+                  <h5>Proof point</h5>
+                  <p><a href="work.html#greencity" style="color:var(--brass-bright)">1.3M-row CRM migration with zero lost records</a>; pricebook margin analysis across 130+ lines; the ETES platform at Kuiper.</p>
+                </div>
+                <div class="tf">
+                  <h5>Timeline &amp; cost profile</h5>
+                  <p>4–12 weeks. Highest one-time effort — and the foundation for everything above it.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tier reveal">
+            <div class="tier-badge">
+              <span class="lvl">T4</span>
+              <span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span>
+              <span class="cx">Complexity: High</span>
+            </div>
+            <div class="tier-main">
+              <h3>Agentic &amp; Custom Systems</h3>
+              <p class="cx-desc">Multi-step autonomous workflows, custom product builds, systems that learn.</p>
+              <div class="tier-fields">
+                <div class="tf">
+                  <h5>You'll know it's this tier when</h5>
+                  <p>Approved workflows are mature enough to run with less supervision — or no off-the-shelf tool exists.</p>
+                </div>
+                <div class="tf">
+                  <h5>The stack</h5>
+                  <div class="chips"><span class="chip">LangChain</span><span class="chip">AutoGen</span><span class="chip">MCP servers</span><span class="chip">Claude Code</span><span class="chip">Pinecone / vector DBs</span><span class="chip">Custom REST APIs</span><span class="chip">React front-ends</span></div>
+                </div>
+                <div class="tf">
+                  <h5>Proof point</h5>
+                  <p><a href="ventures.html" style="color:var(--brass-bright)">InsightEdge</a> — the AI Virtual COO: agents handle quoting, job costing, and rebate tracking; the owner approves.</p>
+                </div>
+                <div class="tf">
+                  <h5>Timeline &amp; cost profile</h5>
+                  <p>Months. Reserved for cases where Tiers 1–3 can't get there.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="tier-rule reveal">
+          <h3>The rule that ties it together: <em>start at the lowest tier that solves the problem.</em></h3>
+          <p>Every tier must pay for the one above it. <strong>Most consultants sell Tier 4 to businesses that need Tier 1.</strong> We audit first, cost every recommendation, and only escalate complexity when the ROI math demands it.</p>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ UVP ============ -->
     <section class="hairline">
       <div class="wrap">
         <div class="section-head reveal">
-          <p class="eyebrow">04 — Why JustRush.AI</p>
+          <p class="eyebrow">05 — Why JustRush.AI</p>
           <h2>Advised by someone who actually runs one.</h2>
         </div>
         <div class="uvp-list reveal">
@@ -242,7 +381,7 @@
     <section class="hairline">
       <div class="wrap">
         <div class="section-head reveal">
-          <p class="eyebrow">05 — Real Results</p>
+          <p class="eyebrow">06 — Real Results</p>
           <h2>Recent client outcomes.</h2>
         </div>
         <div class="case-grid">
@@ -350,6 +489,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=20260702a"></script>
+  <script src="js/main.js?v=20260702b"></script>
 </body>
 </html>
