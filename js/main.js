@@ -11,13 +11,29 @@
   const toggle = document.querySelector('.nav-toggle');
   const links = document.querySelector('.nav-links');
   if (toggle && links) {
+    const scrim = document.createElement('div');
+    scrim.className = 'nav-scrim';
+    document.body.appendChild(scrim);
+
+    const closeBtn = document.createElement('button');
+    closeBtn.className = 'drawer-close';
+    closeBtn.setAttribute('aria-label', 'Close menu');
+    closeBtn.textContent = '✕';
+    links.prepend(closeBtn);
+
     const setMenu = (open) => {
       links.classList.toggle('open', open);
+      scrim.classList.toggle('show', open);
       document.body.classList.toggle('menu-open', open);
       toggle.textContent = open ? 'Close' : 'Menu';
       toggle.setAttribute('aria-expanded', String(open));
     };
     toggle.addEventListener('click', () => setMenu(!links.classList.contains('open')));
+    closeBtn.addEventListener('click', () => setMenu(false));
+    scrim.addEventListener('click', () => setMenu(false));
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && links.classList.contains('open')) setMenu(false);
+    });
     links.querySelectorAll('a').forEach((a) =>
       a.addEventListener('click', () => setMenu(false))
     );

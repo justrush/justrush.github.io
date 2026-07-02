@@ -268,7 +268,7 @@ section { padding-block: var(--space-section); position: relative; }
 
 .nav-toggle {
   display: none;
-  background: none;
+  background: rgba(18, 23, 36, 0.9);
   border: 1px solid var(--line-strong);
   border-radius: var(--radius);
   color: var(--text);
@@ -278,7 +278,40 @@ section { padding-block: var(--space-section); position: relative; }
   text-transform: uppercase;
   padding: 0.5rem 0.9rem;
   cursor: pointer;
+  position: relative;
+  z-index: 120; /* stays above the open drawer so "Close" is always reachable */
 }
+
+/* Backdrop behind the open mobile drawer — tap to close */
+.nav-scrim {
+  position: fixed;
+  inset: 0;
+  background: rgba(6, 8, 13, 0.62);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s;
+  z-index: 98;
+}
+.nav-scrim.show { opacity: 1; pointer-events: auto; }
+
+/* ✕ button inside the drawer (mobile only) */
+.drawer-close {
+  display: none;
+  position: absolute;
+  top: 1rem;
+  right: 1.1rem;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--line-strong);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text);
+  font-size: 1.05rem;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 2;
+}
+.drawer-close:hover { border-color: var(--brass); color: var(--brass-bright); }
 
 /* ---------- Buttons ---------- */
 .btn-row { display: flex; flex-wrap: wrap; gap: 1rem; }
@@ -1332,6 +1365,9 @@ body.theme-rush ::selection { background: var(--rush-red); color: #fff; }
   .nav-cta { margin-top: 0.5rem; }
   .footer-inner { flex-direction: column; align-items: flex-start; gap: 1.2rem; }
   .footer-links { gap: 0.8rem 1.3rem; }
+  .drawer-close { display: grid; place-items: center; }
+  /* single close control while open: the drawer's ✕ replaces the header toggle */
+  body.menu-open .nav-toggle { visibility: hidden; }
 }
 
 @media (prefers-reduced-motion: reduce) {
