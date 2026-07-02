@@ -36,7 +36,7 @@
 
 /* ---------- Reset ---------- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 [id] { scroll-margin-top: 90px; }
 body {
   background: var(--ink);
@@ -45,7 +45,6 @@ body {
   font-size: 1.0625rem;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
 }
 img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
@@ -857,7 +856,7 @@ footer {
 }
 .footer-inner .mono-label a { color: var(--text-dim); transition: color 0.2s; }
 .footer-inner .mono-label a:hover { color: var(--brass); }
-.footer-links { display: flex; gap: 1.8rem; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 0.9rem 1.8rem; }
 
 /* ---------- Interactive layer ---------- */
 /* Scroll progress bar */
@@ -1331,6 +1330,8 @@ body.theme-rush ::selection { background: var(--rush-red); color: #fff; }
   .nav-drop a { font-size: 0.8rem; color: var(--muted); }
   .nav-drop a.active { color: var(--brass-bright); }
   .nav-cta { margin-top: 0.5rem; }
+  .footer-inner { flex-direction: column; align-items: flex-start; gap: 1.2rem; }
+  .footer-links { gap: 0.8rem 1.3rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
